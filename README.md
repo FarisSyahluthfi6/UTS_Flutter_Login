@@ -45,9 +45,11 @@
 
 ![ekstension](screenshot/ekstension2.png)</li></p></br>
 
+![ekstension](screenshot/ekstension3.png)</li></p></br>
+
 <li> Klik fn+f2 untuk membuat folder baru flutter
 
-![vscode](screenshot/vscode2.png)</li></p></br>
+![vscode](screenshot/vscode1.png)</li></p></br>
 
 
 
