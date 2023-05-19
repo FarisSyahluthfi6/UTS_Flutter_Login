@@ -55,6 +55,21 @@
 
 ![vscode](screenshot/vscode2.png)</li></p></br>
 
+# 4. Membuat Screen Login Flutter Dart </p></br>
+<li> Buat folder <b>assets</b> Lalu cari background untuk Login dan Register.</li></p></br>
+
+<li> Buka file <b> pubspec.yaml </b> Lalu buat code berikut:
+
+```java
+flutter:
+  assets:
+    - assets/login.jpg
+    - assets/register.jpg
+
+```
+ </li></p></br>
+
+
 
 
 
