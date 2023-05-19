@@ -12,6 +12,7 @@
 <li> Pilih operasi sistem sesuai laptop atau PC kalian, disini saya pake sistem operasi windows. Jadi saya download Flutternya Windows.</li></p> </br>
 
 # 2. Installasi Flutter di Windows
+
 <li> Ekstak file Flutter yang sudah di download. Caranya adalah klik kanan, pilih ekstak here, setelah itu tunggu sampai ekstak selesai. </li><p>
 <li> Pindahkan file Flutter yang sudah di ekstak ke dalam disk C atau disk D. Disini saya memindahkannya ke disk C.
 
@@ -30,4 +31,26 @@
 
 <li> new lalu arahkan ke file flutternya
 
-![enviroment](screenshot/enviroment4.png)</li></p>
+![enviroment](screenshot/enviroment4.png)</li></p></br>
+
+# 3. Membuat Projek Aplikasinya </br>
+
+<li> Kita akan membuat program aplikasinya di Visual Studio Code. Buka aplikasi Visual Studio Code
+
+![vscode](screenshot/vscode.png)</li></p></br>
+
+<li> Pilih menu <b> Ekstensions </b> sebelah kiri untuk menginstal <b> FLUTTER dan DART </b>
+
+![ekstension](screenshot/ekstension1.png)</li></p></br>
+
+![ekstension](screenshot/ekstension2.png)</li></p></br>
+
+<li> Klik fn+f2 untuk membuat folder baru flutter
+
+![vscode](screenshot/vscode2.png)</li></p></br>
+
+
+
+
+
+
