@@ -324,4 +324,269 @@ Penjelasan codingan di atas: </p>
 
 14.`'forgot': (context) => resetPassword(),`: Ini adalah definisi rute untuk halaman reset password. Ketika rute ini dipanggil, widget `resetPassword` akan ditampilkan.</p></br>
 
+# 5. Membuat Screen Registrasi Flutter Dart </p></br>
+Langkah selanjutnya adalah membuat Screen Registrasi, caranya adalah sebagai berikut: </p>
+
+<li> Buat File baru di Folder <b>lib</b> kita beri nama filenya yaitu <b>register.dart</b>, Kemudian kita ketik codingan di dalam file tersebut. Berikut ini codingannya: </p></br>
+
+```java
+
+import 'package:flutter/material.dart';
+
+class myRegister extends StatefulWidget {
+  const myRegister({Key? key}) : super(key: key);
+
+  @override
+  _myRegisterState createState() => _myRegisterState();
+}
+
+class _myRegisterState extends State<myRegister> {
+  //Password Field obscureText  Handler
+  bool _isHidden = true;
+  void _toggleVisibility() {
+    setState(() {
+      _isHidden = !_isHidden;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/register.jpg',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Scaffold(
+          appBar: AppBar(
+              elevation: null,
+              backgroundColor: Colors.white,
+              leading: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'login');
+                },
+                child: Icon(
+                  Icons.arrow_back_ios_rounded,
+                  color: Colors.white,
+                ),
+              )),
+          backgroundColor: Color.fromARGB(0, 168, 122, 122),
+          body: Stack(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'REGISTER',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35.0,
+                    ),
+                  ),
+                ],
+              ),
+              SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.25,
+                    left: 30,
+                    right: 30,
+                  ),
+                  child: Column(
+                    children: [
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Username',
+                          fillColor: Color.fromARGB(255, 54, 55, 56),
+                          filled: true,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                              )),
+                              labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          fillColor: Color.fromARGB(255, 54, 55, 56),
+                          prefixIcon: Icon(Icons.email_outlined),
+                          filled: true,
+                          labelText: 'Email',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          fillColor: Color.fromARGB(255, 54, 55, 56),
+                          prefixIcon: Icon(Icons.phone),
+                          filled: true,
+                          labelText: 'Phone',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        obscureText: _isHidden,
+                        decoration: InputDecoration(
+                          fillColor: Color.fromARGB(255, 27, 27, 27),
+                          prefixIcon: Icon(Icons.lock),
+                          suffixIcon: IconButton(
+                            onPressed: _toggleVisibility,
+                            icon: _isHidden
+                                ? Icon(Icons.visibility)
+                                : Icon(Icons.visibility_off),
+                          ),
+                          labelText: 'Password',
+                          filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                maximumSize: const Size(170.0, 90.0),
+                                minimumSize: const Size(170.0, 60.0),
+                                primary: Colors.black,
+                                shape: const StadiumBorder(),
+                              ),
+                              onPressed: () {},
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                //crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text('REGISTER'),
+                                  Icon(
+                                    Icons.content_paste_rounded,
+                                    color: Colors.white,
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
+                      SizedBox(height: 30.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'login');
+                            },
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 243, 239, 239)),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'forgot');
+                            },
+                            child: Text(
+                              'Forgot password?',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
+</p></br>
+
+Berikut ini adalah penjelasan dari codingan diatas: </p></br>
+Code di atas adalah definisi dari kelas `myRegister` yang merupakan turunan dari kelas `StatefulWidget` dalam Flutter. Berikut adalah penjelasan dari kode tersebut:
+
+1. `class myRegister extends StatefulWidget { ... }`: Mendefinisikan kelas `myRegister` yang merupakan turunan dari `StatefulWidget`. `StatefulWidget` digunakan ketika widget memiliki state yang berubah selama masa hidupnya.</p>
+
+2. `const myRegister({Key? key}) : super(key: key);`: Konstruktor untuk kelas `myRegister`. Ini menerima parameter `key` yang diperlukan oleh `StatefulWidget` superclass.</p>
+
+3. `_myRegisterState createState() => _myRegisterState();`: Membuat instance dari `_myRegisterState` yang merupakan subclass dari `State` untuk mengatur state dari widget `myRegister`.</p>
+
+4. `class _myRegisterState extends State<myRegister> { ... }`: Mendefinisikan kelas `_myRegisterState` yang merupakan turunan dari `State` dan digunakan untuk mengatur state dari widget `myRegister`.</p>
+
+5. `bool _isHidden = true;`: Membuat variabel `_isHidden` yang bertipe boolean dan diinisialisasi dengan `true`. Variabel ini digunakan untuk mengontrol visibilitas teks pada password field.</p>
+
+6. `void _toggleVisibility() { ... }`: Metode `_toggleVisibility()` digunakan untuk mengubah nilai `_isHidden` menjadi negasi dari nilai saat ini. Metode ini akan dipanggil saat tombol toggle visibilitas password ditekan.</p>
+
+7. `Widget build(BuildContext context) { ... }`: Override dari metode `build` yang digunakan untuk membangun dan mengatur tampilan widget `myRegister`.</p>
+
+8. `SafeArea`: Widget `SafeArea` digunakan untuk memberikan area yang aman pada tampilan, sehingga menghindari tumpang tindih dengan elemen sistem seperti status bar atau bilah navigasi.</p>
+
+9. `Container`: Widget `Container` digunakan untuk mengatur tampilan dan dekorasi dari area konten aplikasi.</p>
+
+10. `Scaffold`: Widget `Scaffold` adalah kerangka utama aplikasi yang menyediakan fitur-fitur dasar seperti AppBar, Drawer, dan sebagainya.</p>
+
+11. `AppBar`: Widget `AppBar` adalah komponen yang digunakan untuk menampilkan bilah aplikasi di bagian atas aplikasi. Di sini, AppBar tidak memiliki bayangan (`elevation: null`) dan memiliki warna latar belakang putih (`backgroundColor: Colors.white`).</p>
+
+12. `IconButton`: Widget `IconButton` adalah tombol yang berisi sebuah ikon. Di sini, digunakan untuk tombol kembali dengan ikon panah ke belakang (`Icons.arrow_back_ios_rounded`).</p>
+
+13. `Text`: Widget `Text` digunakan untuk menampilkan teks dengan gaya tertentu. Di sini, digunakan untuk menampilkan teks "REGISTER" dengan gaya yang ditentukan.</p>
+
+14. `SingleChildScrollView`: Widget `SingleChildScrollView` digunakan untuk membuat area yang dapat digulir untuk konten yang panjang.</p>
+
+15. `TextField`: Widget `TextField` digunakan untuk membuat input teks yang bisa diisi pengguna.</p>
+
+16. `SizedBox`: Widget `SizedBox` digunakan untuk memberikan spasi kosong dengan ukuran tertentu.</p>
+
+17. `ElevatedButton`: Widget `ElevatedButton` digunakan untuk membuat tombol dengan tampilan yang ditinggikan dan bayangan. </p>
 
