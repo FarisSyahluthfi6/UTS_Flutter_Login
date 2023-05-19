@@ -764,5 +764,21 @@ Berikut ini adalah penjelasan dari codingan diatas: </p></br>
 
 17. `TextButton`: Widget `TextButton` digunakan untuk membuat tombol teks.</p>
 
-18. `Navigator.pushNamed(context, 'register')`: Digunakan untuk mengarahkan navigasi ke halaman dengan rute bernama 'register'.</p>
+18. `Navigator.pushNamed(context, 'register')`: Digunakan untuk mengarahkan navigasi ke halaman dengan rute bernama 'register'.</p></br>
+
+# 6. Hasil Programnya </p></br>
+Berikut ini adalah cara menjalankan (RUN) program yang sudah kita coding atau buat:
+
+<li> Pilih <b>Terminal</b>, lalu pilih <b>New Terminal</b>, Maka akan keluar tambilan berikut: <p><br>
+
+![Run](screenshot/run1.png)</li></p>
+
+<li>Selanjutnya, ketikan kode berikut untuk menjalankan programnya: <b>flutter pub get</b> dan <b>flutter run -d chrome</b>. </p></br>
+
+![Run](screenshot/run2.png)</li></p>
+
+<li>Setelah itu maka akan keluar tampilan seperti ini: </li></p></br>
+
+![Run](screenshot/run3.png)</li></p>
+
 
