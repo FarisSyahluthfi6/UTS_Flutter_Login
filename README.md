@@ -16,8 +16,8 @@
 <li> Pindahkan file Flutter yang sudah di ekstak ke dalam disk C atau disk D. Disini saya memindahkannya ke disk C.
 
 ![flutter](screenshot/flutter.png)</li></p>
-<li> Pilih menu pencarian di bawah. contoh environment di windows:
-![enviroment](screenshot/enviroment.png)</li></p>
-<li> pilih environment variable
-![enviroment](screenshot/enviroment2.png)</li></p>
+<li> Pilih menu pencarian di bawah. contoh environment di windows:</li></p>
+![enviroment](screenshot/enviroment.png)
+<li> pilih environment variable</li></p>
+![enviroment](screenshot/enviroment2.png)
 
