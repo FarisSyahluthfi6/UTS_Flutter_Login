@@ -251,7 +251,7 @@ class _MyLoginState extends State<MyLogin> {
 
 ```
 </li></p></br>
-Penjelasan dari codingan di atas:
+Penjelasan dari codingan di atas:</p>
 1. import 'package:flutter/material.dart';: Mengimpor package flutter/material.dart, yang berisi kelas-kelas yang digunakan untuk membangun antarmuka pengguna (UI) dengan menggunakan framework Flutter. </p>
 2. import 'package:flutter_application_1/login.dart';: Mengimpor file login.dart yang berisi kode untuk halaman login. </p>
 3. import 'package:flutter_application_1/register.dart';: Mengimpor file register.dart yang berisi kode untuk halaman registrasi.</p>
@@ -267,5 +267,61 @@ Penjelasan dari codingan di atas:
 13. 'register': (context) => myRegister(),: Ini adalah definisi rute untuk halaman registrasi. Ketika rute ini dipanggil, widget myRegister akan ditampilkan.</p>
 14. 'forgot': (context) => resetPassword(),: Ini adalah definisi rute untuk halaman reset password. Ketika rute ini dipanggil, widget resetPassword akan ditampilkan.</p>
 
+<li>Selanjutnya, buka file <b>main.dart</b> hapus semua codingannya, lalu ketik kodingan baru berikut ini:</p></br>
+
+```java
+
+import 'package:flutter/material.dart'; 
+import 'package:flutter_application_1/login.dart';
+import 'package:flutter_application_1/register.dart';
+import 'package:flutter_application_1/resetpass.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: 'login',
+      title: 'LOGIN',
+      routes: {
+        'login': (context) => MyLogin(),
+        'register': (context) => myRegister(),
+        'forgot': (context) => resetPassword(),
+      },
+    ),
+  );
+}
+
+
+```
+</p></br>
+
+Penjelasan codingan di atas: </p>
+1.`import 'package:flutter/material.dart';`: Mengimpor package `flutter/material.dart`, yang berisi kelas-kelas yang diperlukan untuk membangun antarmuka pengguna (UI) menggunakan framework Flutter.</p>
+
+2.`import 'package:flutter_application_1/login.dart';`: Mengimpor file `login.dart` yang berisi kode untuk halaman login. File ini kemungkinan berisi definisi dari kelas `MyLogin` yang merupakan widget untuk tampilan halaman login.</p>
+
+3.`import 'package:flutter_application_1/register.dart';`: Mengimpor file `register.dart` yang berisi kode untuk halaman registrasi. File ini kemungkinan berisi definisi dari kelas `myRegister` yang merupakan widget untuk tampilan halaman registrasi.</p>
+
+4.`import 'package:flutter_application_1/resetpass.dart';`: Mengimpor file `resetpass.dart` yang berisi kode untuk halaman reset password. File ini kemungkinan berisi definisi dari kelas `resetPassword` yang merupakan widget untuk tampilan halaman reset password.</p>
+
+5.`void main() { ... }`: Ini adalah fungsi utama yang akan dijalankan saat aplikasi dijalankan. Fungsi ini akan menjalankan aplikasi Flutter.</p>
+
+6.`runApp(...);`: Metode `runApp` digunakan untuk menjalankan aplikasi Flutter. Di dalamnya, kita memberikan `MaterialApp` sebagai widget utama.</p>
+
+7.`MaterialApp`: Ini adalah widget yang membangun dan mengkonfigurasi aplikasi Flutter. Widget ini memiliki beberapa properti seperti `debugShowCheckedModeBanner`, `initialRoute`, `title`, dan `routes`.</p>
+
+8.`debugShowCheckedModeBanner: false,`: Properti ini digunakan untuk menghilangkan tanda "Debug" pada aplikasi.</p>
+
+9.`initialRoute: 'login',`: Properti ini menentukan rute awal aplikasi, dalam hal ini adalah halaman login.</p>
+
+10.`title: 'LOGIN',`: Properti ini digunakan untuk memberikan judul pada aplikasi.</p>
+
+11.`routes: { ... }`: Properti ini digunakan untuk mendefinisikan rute-rute yang ada dalam aplikasi. Setiap rute memiliki nama yang unik dan dihubungkan dengan widget yang akan ditampilkan.</p>
+
+12.`'login': (context) => MyLogin(),`: Ini adalah definisi rute untuk halaman login. Ketika rute ini dipanggil, widget `MyLogin` akan ditampilkan.</p>
+
+13.`'register': (context) => myRegister(),`: Ini adalah definisi rute untuk halaman registrasi. Ketika rute ini dipanggil, widget `myRegister` akan ditampilkan.</p>
+
+14.`'forgot': (context) => resetPassword(),`: Ini adalah definisi rute untuk halaman reset password. Ketika rute ini dipanggil, widget `resetPassword` akan ditampilkan.</p></br>
 
 
