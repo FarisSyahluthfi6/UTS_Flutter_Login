@@ -777,8 +777,20 @@ Berikut ini adalah cara menjalankan (RUN) program yang sudah kita coding atau bu
 
 ![Run](screenshot/run2.png)</li></p>
 
-<li>Setelah itu maka akan keluar tampilan seperti ini: </li></p></br>
+<li>Setelah itu, maka akan keluar tampilan seperti ini: </li></p></br>
 
-![Run](screenshot/run3.png)</li></p>
+![Run](screenshot/run3.png)</p></br>
+
+# Login Screen Flutter Dart </p></br>
+
+![Login](screenshot/login.png)</p></br>
+
+# Register Screen Flutter Dart </p></br>
+
+![Register](screenshot/register.png)</p></br>
+
+# Forgot Password Screen Flutter Dart </p></br>
+
+![Forgot Password](screenshot/forgotpass.png)</p></br>
 
 
