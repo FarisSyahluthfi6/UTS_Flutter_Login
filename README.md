@@ -6,13 +6,18 @@
 
 ![output](screenshot/faris.jpg)</p>
 
-## Membuat Tampilan Login, Registrasi dan Lupa Password Menggunakan Flutter Dart </p></br>
+## Membuat Tampilan Login, Registrasi dan Lupa Password Menggunakan Flutter Dart. </p></br>
 # 1. Download Flutter</p>
-<li> Download SDK Flutternya di: https://docs.flutter.dev/get-started/install </li> </p>
-<li> Pilih operasi sistem sesuai laptop atau PC kalian, disini saya pake sistem operasi windows. Jadi saya download Flutternya Windows</li></p> </br>
+<li> Download SDK Flutternya di: https://docs.flutter.dev/get-started/install . </li> </p>
+<li> Pilih operasi sistem sesuai laptop atau PC kalian, disini saya pake sistem operasi windows. Jadi saya download Flutternya Windows.</li></p> </br>
 
 # 2. Installasi Flutter di Windows
-<li> Ekstak file Flutter yang sudah di download. Caranya adalah klik kanan, pilih ekstak here, setelah itu tunggu sampai ekstak selesai </li><p>
+<li> Ekstak file Flutter yang sudah di download. Caranya adalah klik kanan, pilih ekstak here, setelah itu tunggu sampai ekstak selesai. </li><p>
 <li> Pindahkan file Flutter yang sudah di ekstak ke dalam disk C atau disk D. Disini saya memindahkannya ke disk C.
 
-![flutter](screenshot/flutter.png)</p>
+![flutter](screenshot/flutter.png)</li></p>
+<li> Pilih menu pencarian di bawah. contoh environment di windows:
+![enviroment](screenshot/enviroment.png)</li></p>
+<li> pilih environment variable
+![enviroment](screenshot/enviroment2.png)</li></p>
+
