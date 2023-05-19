@@ -51,6 +51,9 @@
 
 ![vscode](screenshot/vscode1.png)</li></p></br>
 
+<li> inilah penampakannya jika kalian berhasil
+
+![vscode](screenshot/vscode2.png)</li></p></br>
 
 
 
