@@ -58,7 +58,11 @@
 # 4. Membuat Screen Login Flutter Dart </p></br>
 <li> Buat folder <b>assets</b> Lalu cari background untuk Login dan Register.</li></p></br>
 
+![assets](screenshot/assets.png)</li></p></br>
+
 <li> Buka file <b> pubspec.yaml </b> Lalu buat code berikut:
+
+![pubspec](screenshot/pubspec.png)</li></p></br>
 
 ```java
 flutter:
