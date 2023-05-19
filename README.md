@@ -24,3 +24,10 @@
 
 ![enviroment](screenshot/enviroment2.png)</li></p>
 
+<li> pilih path
+
+![enviroment](screenshot/enviroment3.png)</li></p>
+
+<li> new lalu arahkan ke file flutternya
+
+![enviroment](screenshot/enviroment4.png)</li></p>
