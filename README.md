@@ -72,6 +72,7 @@ flutter:
 
 ```
  </li></p></br>
+Penjelasan codingan: Fungsi code diatas adalah untuk menampilkan gambar atau background kedalam flutter. </li></p></br>
 
 
 
