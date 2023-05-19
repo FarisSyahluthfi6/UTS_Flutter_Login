@@ -793,4 +793,6 @@ Berikut ini adalah cara menjalankan (RUN) program yang sudah kita coding atau bu
 
 ![Forgot Password](screenshot/forgotpass.png)</p></br>
 
+![Terimakasih](screenshot/terimakasih.jpg)</p></br>
+
 
