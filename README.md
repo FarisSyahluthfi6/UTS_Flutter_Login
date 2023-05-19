@@ -554,7 +554,6 @@ class _myRegisterState extends State<myRegister> {
 </p></br>
 
 Berikut ini adalah penjelasan dari codingan diatas: </p></br>
-Code di atas adalah definisi dari kelas `myRegister` yang merupakan turunan dari kelas `StatefulWidget` dalam Flutter. Berikut adalah penjelasan dari kode tersebut:
 
 1. `class myRegister extends StatefulWidget { ... }`: Mendefinisikan kelas `myRegister` yang merupakan turunan dari `StatefulWidget`. `StatefulWidget` digunakan ketika widget memiliki state yang berubah selama masa hidupnya.</p>
 
@@ -589,4 +588,181 @@ Code di atas adalah definisi dari kelas `myRegister` yang merupakan turunan dari
 16. `SizedBox`: Widget `SizedBox` digunakan untuk memberikan spasi kosong dengan ukuran tertentu.</p>
 
 17. `ElevatedButton`: Widget `ElevatedButton` digunakan untuk membuat tombol dengan tampilan yang ditinggikan dan bayangan. </p>
+
+# 6. Membuat Screen Forgot Password Flutter Dart </p></br>
+Langkah selanjutnya adalah membuat Screen Forgot Password, caranya adalah sebagai berikut: </p>
+
+<li> Buat File baru di Folder <b>lib</b> kita beri nama filenya yaitu <b>resetpass.dart</b>, Kemudian kita ketik codingan di dalam file tersebut. Berikut ini codingannya: </p></br>
+
+```java
+
+import 'package:flutter/material.dart';
+
+class resetPassword extends StatefulWidget {
+  const resetPassword({Key? key}) : super(key: key);
+
+  @override
+  _resetPasswordState createState() => _resetPasswordState();
+}
+
+class _resetPasswordState extends State<resetPassword> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/login.jpg',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Stack(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 65.0,
+                    ),
+                    child: Text(
+                      'RESET \n PASSWORD',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.5,
+                    left: 35,
+                    right: 35,
+                  ),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          prefixIcon: Icon(Icons.email_outlined),
+                          fillColor: Color.fromARGB(255, 226, 234, 250),
+                          filled: true,
+                          // hintText: 'Password',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 60.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                maximumSize: Size(170.0, 90.0),
+                                minimumSize: Size(170.0, 60.0),
+                                primary: const Color.fromARGB(255, 160, 14, 14),
+                                shape: StadiumBorder(),
+                              ),
+                              onPressed: () {},
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                //crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text('RESET'),
+                                  Icon(
+                                    Icons.refresh,
+                                    color: Color.fromARGB(255, 241, 241, 255),
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
+                      SizedBox(height: 30.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'register');
+                            },
+                            child: Text(
+                              'Register',
+                              style: TextStyle(color: Color.fromARGB(255, 160, 14, 14)),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'login');
+                            },
+                            child: Text(
+                              'LOGIN',
+                              style: TextStyle(color: Color.fromARGB(255, 160, 14, 14)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+```
+</p></br>
+
+Berikut ini adalah penjelasan dari codingan diatas: </p></br>
+
+1. `class resetPassword extends StatefulWidget { ... }`: Mendefinisikan kelas `resetPassword` yang merupakan turunan dari `StatefulWidget`. `StatefulWidget` digunakan ketika widget memiliki state yang berubah selama masa hidupnya.</p>
+
+2. `const resetPassword({Key? key}) : super(key: key);`: Konstruktor untuk kelas `resetPassword`. Ini menerima parameter `key` yang diperlukan oleh `StatefulWidget` superclass.</p>
+
+3. `_resetPasswordState createState() => _resetPasswordState();`: Membuat instance dari `_resetPasswordState` yang merupakan subclass dari `State` untuk mengatur state dari widget `resetPassword`.</p>
+
+4. `class _resetPasswordState extends State<resetPassword> { ... }`: Mendefinisikan kelas `_resetPasswordState` yang merupakan turunan dari `State` dan digunakan untuk mengatur state dari widget `resetPassword`.</p>
+
+5. `Widget build(BuildContext context) { ... }`: Override dari metode `build` yang digunakan untuk membangun dan mengatur tampilan widget `resetPassword`.</p>
+
+6. `SafeArea`: Widget `SafeArea` digunakan untuk memberikan area yang aman pada tampilan, sehingga menghindari tumpang tindih dengan elemen sistem seperti status bar atau bilah navigasi.</p>
+
+7. `Container`: Widget `Container` digunakan untuk mengatur tampilan dan dekorasi dari area konten aplikasi.</p>
+
+8. `Scaffold`: Widget `Scaffold` adalah kerangka utama aplikasi yang menyediakan fitur-fitur dasar seperti AppBar, Drawer, dan sebagainya.</p>
+
+9. `DecorationImage`: Digunakan untuk menambahkan gambar latar belakang ke `Container` menggunakan `AssetImage` dengan fitur penyesuaian (`fit: BoxFit.cover`).</p>
+
+10. `Row`: Widget `Row` digunakan untuk mengatur anak-anaknya secara horizontal.</p>
+
+11. `Text`: Widget `Text` digunakan untuk menampilkan teks dengan gaya tertentu. Di sini, digunakan untuk menampilkan teks "RESET PASSWORD" dengan gaya yang ditentukan.</p>
+
+12. `SingleChildScrollView`: Widget `SingleChildScrollView` digunakan untuk membuat area yang dapat digulir untuk konten yang panjang.</p>
+
+13. `TextFormField`: Widget `TextFormField` digunakan untuk membuat input teks yang bisa diisi pengguna.</p>
+
+14. `SizedBox`: Widget `SizedBox` digunakan untuk memberikan spasi kosong dengan ukuran tertentu.</p>
+
+15. `ElevatedButton`: Widget `ElevatedButton` digunakan untuk membuat tombol dengan tampilan yang ditinggikan dan bayangan. Di sini, tombol "RESET" ditampilkan dengan ikon refresh (`Icons.refresh`).</p>
+
+16. `Row`: Widget `Row` digunakan untuk mengatur anak-anaknya secara horizontal.</p>
+
+17. `TextButton`: Widget `TextButton` digunakan untuk membuat tombol teks.</p>
+
+18. `Navigator.pushNamed(context, 'register')`: Digunakan untuk mengarahkan navigasi ke halaman dengan rute bernama 'register'.</p>
 
